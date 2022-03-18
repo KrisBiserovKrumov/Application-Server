@@ -1,0 +1,25 @@
+<ServerConfig>
+    <Libraries>
+        <Library name="http-connector"
+                 mainClass="bg.codexio.HttpConnector"
+                 method="init(java.util.List&lt;bg.codexio.serverConfig.ServerConfig> serverConfig,
+                 java.util.List&lt;bg.codexio.handler.Handler> handlers)"/>
+        <Library name="static-file-handler"
+                 mainClass="bg.codexio.StaticFileHandler"
+                 method="init()"/>
+    </Libraries>
+
+    <Connectors>
+        <Connector port="8200" asyncTimeout="40000000" maxHeaderCount="80" maxParametersCount="50" maxPostSize="2"
+                   threadPoolSize="32"/>
+        <Connector port="8500" asyncTimeout="2000000000" maxHeaderCount="20" maxParametersCount="10" maxPostSize="1"
+                   threadPoolSize="23">
+            <contextPath>
+                /bye
+            </contextPath>
+        </Connector>
+        <Connector port="8501" asyncTimeout="200000000" maxHeaderCount="10" maxParametersCount="10" maxPostSize="1"
+                   threadPoolSize="11"/>
+    </Connectors>
+
+</ServerConfig>
