@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>realWar</servlet-name>
+        <servlet-class>bg.codexio.servletDispatcher.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>realWar</servlet-name>
+        <url-pattern>/**</url-pattern>
+    </servlet-mapping>
+</web-app>
